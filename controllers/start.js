@@ -8,16 +8,16 @@ class StartController extends Telegram.TelegramBaseController {
     console.log('started')
     $.sendMessage('Welcome to the bot!')
 
-    var interval = schedule.scheduleJob('*/5 * * * * *', function () {
-      console.log('interval')
-      $.sendMessage('New Round')
-    })
-    // $.runMenu({
-    //   message: 'Commands:',
-    //   layout: 2,
-    //   '/add': () => {},
-    //   '/get': () => {}
+    // var interval = schedule.scheduleJob('*/5 * * * * *', function () {
+    //   console.log('interval')
+    //   $.sendMessage('New Round')
     // })
+    $.runMenu({
+      message: 'Commands:',
+      layout: 2,
+      '/add': () => {},
+      '/get': () => {}
+    })
   }
   // get routes () {
   //   return {
