@@ -11,12 +11,6 @@ class RoundController extends Telegram.TelegramBaseController {
       else $.setUserSession('participants', participants.concat([username]))
       $.sendMessage('You have been added as ' + username)
     })
-    $.runMenu({
-      message: 'Select:',
-      layout: 1,
-      '/add': () => {},
-      '/get': () => {}
-    })
   }
   get ($) {
     $.getUserSession('participants').then(participants => {
